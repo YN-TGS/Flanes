@@ -12,7 +12,13 @@ def acerca(request):
     return render(request, 'about.html', {})
 
 def bienvenido(request):
-    return render(request, 'welcome.html', {})
+    private_flans = Flan.objects.filter(is_private=True)
+
+    
+    return render(request, 'welcome.html', {
+        'private_flans': private_flans
+
+    })
 
 
 
