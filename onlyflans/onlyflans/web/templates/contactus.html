@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+<div class="container">
+    contacto
+
+    <form action="/contacto" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+
+
+</div>
+
+{% endblock %}
