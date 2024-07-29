@@ -10,9 +10,25 @@
     {% extends 'base.html' %}
     
     {% block 'content' %}
-    
+    <br>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="p-5 text-white bg-dark rounded-3">
+                <h2>
+                    Bienvenido, {{user.get_username}}.
+                </h2>
+                <p>
+                    Esta es la página de la Sociedad Secreta de Flanes. Sólo miembros exclusivos pueden acceder a este lugar.
+                </p>
+            </div>
+            <br>
+        </div>
+
+    </div>
+
+
     <div class="container">
-        <h3 class="text-center">~ Nuestros Flanes secretos les dan la bienvenida ~</h3>
+        <h3 class="text-center">~ Miembros de la Sociedad Secreta de Flanes ~</h3>
         <div class="row">
             {% for flan in private_flans %}
             <div class="col-6 col-md-3">
