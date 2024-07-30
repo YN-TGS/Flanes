@@ -16,6 +16,8 @@ def acerca(request):
 
 @login_required
 def bienvenido(request):
+
+
     private_flans = Flan.objects.filter(is_private=True)
 
     
@@ -41,4 +43,7 @@ def contacto(request):
 
 
 def exito(request):
-    return render(request, 'success.html',{}) 
+    return render(request, 'success.html',{})
+
+def location(request):
+     return render(request, 'location.html',{}) 
